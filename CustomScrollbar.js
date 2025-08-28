@@ -1,10 +1,10 @@
 /**
  * Features:
- * - Custom-styled scrollbar with top cap, middle section, and bottom cap
+ * - Custom scrollbar with top cap, middle section, and bottom cap
  * - Draggable thumb for scrolling
  * - Auto-hiding when content fits container
  * - Smooth scroll on track click
- * - Responsive to container resizing
+ * - FOR DEMO: Draggable container to resizing
  */
 
 
