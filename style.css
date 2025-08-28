@@ -176,7 +176,7 @@ body {
   transform: translateX(-16px);
   background-color: red;
   padding: 0 8px;
-  content: 'scroll-wrapper';
+  content: 'scroll-container';
   color: white;
   font-size: 12px;
 }
