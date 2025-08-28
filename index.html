@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Scrollbar</title>
+    <!-- meta tags -->
+    <meta property="og:title" content="Custom Scrollbar" />
+    <meta name="title" property="og:title" content="Custom Scrollbar" />
+    <meta name="og:image" content="/" />
+    <meta property="og:image" content="/" />
+    <meta name="image" property="og:image" content="/" />
+    <meta name="description" content="" />
+    <meta name="og:description" content="" />
+    <meta property="og:description" content="" />
+    <meta name="description" property="og:description" content="" />
+    <meta name="url" content="" />
+    <meta name="og:url" content="" />
+    <meta property="og:url" content="" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1f1f1f" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="demo-container">
+      <div class="scroll-wrapper"> <!-- Mainly just for the scrollbar track -->
+        <div class="scroll-container"><!-- Actual content -->
+          <h2><b>Highlights</b></h2>
+          <ol>
+            <li>Use JavaScript to create a scrollbar thumb in three parts.</li>
+            <li>Manually draw the scrollbar track using the <code>::before</code> pseudo-element to make the track narrower than the thumb.</li>
+            <li>Hide the scrollbar when it is not needed.</li>
+          </ol>
+          <p>Phasellus malesuada, magna in maximus vulputate, lacus risus luctus elit, vitae faucibus nisl nulla non elit. Sed in dolor id leo ullamcorper suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec a venenatis turpis.</p>
+          <p>Morbi feugiat laoreet sapien, quis luctus justo pretium nec. Nullam euismod luctus lorem, eu fringilla dolor pulvinar et. Nam nec venenatis lectus, nec laoreet lorem.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec sagittis purus. Ut efficitur, felis ut semper imperdiet, turpis augue maximus sapien, ac congue orci nisi at est. Donec luctus accumsan placerat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer rutrum dui eros, at finibus elit aliquet sit amet. Curabitur efficitur eget mauris sed sodales. Sed mattis, est nec posuere consectetur, nisl ante accumsan purus, sed feugiat purus libero at nulla.</p>
+          <p>Phasellus malesuada, magna in maximus vulputate, lacus risus luctus elit, vitae faucibus nisl nulla non elit. Sed in dolor id leo ullamcorper suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec a venenatis turpis.</p>
+          <p>Morbi feugiat laoreet sapien, quis luctus justo pretium nec. Nullam euismod luctus lorem, eu fringilla dolor pulvinar et. Nam nec venenatis lectus, nec laoreet lorem.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec sagittis purus. Ut efficitur, felis ut semper imperdiet, turpis augue maximus sapien, ac congue orci nisi at est. Donec luctus accumsan placerat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer rutrum dui eros, at finibus elit aliquet sit amet. Curabitur efficitur eget mauris sed sodales. Sed mattis, est nec posuere consectetur, nisl ante accumsan purus, sed feugiat purus libero at nulla.</p>
+          <p>Phasellus malesuada, magna in maximus vulputate, lacus risus luctus elit, vitae faucibus nisl nulla non elit. Sed in dolor id leo ullamcorper suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec a venenatis turpis.</p>
+          <p>Morbi feugiat laoreet sapien, quis luctus justo pretium nec. Nullam euismod luctus lorem, eu fringilla dolor pulvinar et. Nam nec venenatis lectus, nec laoreet lorem.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec sagittis purus. Ut efficitur, felis ut semper imperdiet, turpis augue maximus sapien, ac congue orci nisi at est. Donec luctus accumsan placerat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer rutrum dui eros, at finibus elit aliquet sit amet. Curabitur efficitur eget mauris sed sodales. Sed mattis, est nec posuere consectetur, nisl ante accumsan purus, sed feugiat purus libero at nulla.</p>
+        </div>
+      </div>
+      <div class="resize-handle"></div>
+    </div>
+    <p style="color: red; font-weight: bold">Drag to resize the container</p>
+    <!-- scripts -->
+    <script src="CustomScrollbar.js"></script>
+    <script src="demo.js"></script>
+    <script src="dom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+/* Scrollbar Track ========================================== 
+ * 
+ * 
+ * 
+ */
+/* Wrapper for scroll container with custom scrollbar track */
+.scroll-wrapper {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px dashed; /* For demo only */
+  background: #f6e5cd;
+  padding-right: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom scrollbar track using ::before pseudo-element */
+.scroll-wrapper::before {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 4px;
+  background: #f1d988;
+  width: 8px;
+  pointer-events: none;
+  content: '';
+}
+
+/* [Control by JS CustomScrollbar > updateThumb]  Hide scrollbar track when no scrolling is needed */
+.scroll-wrapper.no-scroll::before {
+  display: none;
+}
+
+/* Custom Scrollbar created by JS ==========================================
+ * 
+ * 
+ * 
+ */
+/* Thumb container */
+.custom-scrollbar-thumb {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Top cap of the thumb */
+.thumb-top {
+  background: url('https://HackettLai.github.io/picx-images-hosting/edb/scrollbar-thumb-tip@2x.7zqrpy8dk7.png') no-repeat center; /* Replace img URL */
+  background-size: contain;
+  width: 16px;
+  height: 13px;
+}
+
+/* Middle section (body) of the thumb */
+.thumb-middle {
+  background: url('https://HackettLai.github.io/picx-images-hosting/edb/scrollbar-thumb-body@2x.5c1bflfc83.png') repeat-y center; /* Replace img URL */
+  background-size: contain;
+  width: 16px;
+}
+
+/* Bottom cap of the thumb */
+.thumb-bottom {
+  background: url('https://HackettLai.github.io/picx-images-hosting/edb/scrollbar-thumb-cap@2x.1sfdpscmg5.png') no-repeat center; /* Replace img URL */
+  background-size: contain;
+  width: 16px;
+  height: 13px;
+}
+
+/* Scrollable content container ========================================== 
+ * 
+ * 
+ * 
+ */
+.scroll-container {
+  box-sizing: content-box;
+  border: 1px solid red; /* For demo only */
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  /* Hide native scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+/*
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ *  BELOW: For Demo Only, No Use In Actual Function =====================
+ * 
+ * 
+ */
+/* Reset default margins */
+* {
+  margin: 0;
+}
+
+/* Center content in viewport with flex layout */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  background: #f5efe6;
+  width: 100vw;
+  height: 100vh;
+}
+
+.demo-container {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid; /* For demo only */
+  background: #f6e5cd;
+  padding: 20px;
+  width: 400px;
+  min-width: 200px;
+  height: 600px;
+  min-height: 200px;
+  max-height: 100vh;
+}
+
+.demo-container::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: translate(-20px, -100%);
+  background-color: black;
+  padding: 0 8px;
+  content: 'demo-container';
+  color: white;
+  font-size: 12px;
+}
+
+.scroll-wrapper::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  background-color: black;
+  padding: 0 8px;
+  content: 'scroll-wrapper';
+  color: white;
+  font-size: 12px;
+}
+
+.scroll-container::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-16px);
+  background-color: red;
+  padding: 0 8px;
+  content: 'scroll-wrapper';
+  color: white;
+  font-size: 12px;
+}
+
+.scroll-container > * {
+  padding-bottom: 20px;
+}
+
+/* Resize handle for the demo container */
+.resize-handle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+  z-index: 10;
+  transition: opacity 0.2s;
+  cursor: nw-resize;
+  border-radius: 0 0 3px 0;
+  background: linear-gradient(-45deg, transparent 0%, transparent 30%, #999 30%, #999 35%, transparent 35%, transparent 40%, #999 40%, #999 45%, transparent 45%, transparent 50%, #999 50%, #999 55%, transparent 55%);
+  width: 20px;
+  height: 20px;
+}
+.resize-handle:hover {
+  opacity: 1;
+  background: linear-gradient(-45deg, transparent 0%, transparent 30%, #666 30%, #666 35%, transparent 35%, transparent 40%, #666 40%, #666 45%, transparent 45%, transparent 50%, #666 50%, #666 55%, transparent 55%);
+}
+.resize-handle:active {
+  opacity: 1;
+  background: linear-gradient(-45deg, transparent 0%, transparent 30%, #333 30%, #333 35%, transparent 35%, transparent 40%, #333 40%, #333 45%, transparent 45%, transparent 50%, #333 50%, #333 55%, transparent 55%);
+}
+/* Utility classes for resize operation */
+.resizing {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.resizing * {
+  pointer-events: none !important;
+}
