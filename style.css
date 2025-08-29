@@ -127,7 +127,8 @@ body {
   margin: 0;
   background: #f5efe6;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
 }
 
 .demo-container {
