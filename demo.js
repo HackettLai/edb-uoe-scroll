@@ -34,7 +34,7 @@ class ResizeHandler {
       this.resizeHandle.addEventListener('mousedown', (e) => this.startResize(e));
       document.addEventListener('mousemove', (e) => this.doResize(e));
       document.addEventListener('mouseup', () => this.stopResize());
-      
+
       // Touch events
       this.resizeHandle.addEventListener('touchstart', (e) => this.startResize(e));
       document.addEventListener('touchmove', (e) => this.doResize(e));
@@ -104,5 +104,27 @@ class ResizeHandler {
     this.container.classList.remove('resizing');
   }
 
-  destroy() {}
+  destroy() { }
 }
+
+//Check answer demo button
+function toggleCorrect(button) {
+
+  const input = button.nextElementSibling;
+  if (input && input.tagName === 'INPUT') {
+    input.classList.toggle('correctAns');
+    input.disabled = !input.disabled;
+    if (input.classList.contains('correctAns')) {
+      button.textContent = 'Reset as default';
+    } else {
+      button.textContent = 'Mark as correct';
+    }
+    autoResize(input);
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const markButtons = document.querySelectorAll('button');
+  markButtons.forEach(button => {
+    button.addEventListener('click', () => toggleCorrect(button));
+  });
+});

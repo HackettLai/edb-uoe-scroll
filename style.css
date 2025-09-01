@@ -112,6 +112,26 @@ input[type='text'] {
   font-size: 16px;
 }
 
+input[type='text']::-webkit-input-placeholder {
+  opacity: 1; /* Firefox */
+  color: var(--disable, #d5b589);
+}
+
+input[type='text']::-moz-placeholder {
+  opacity: 1; /* Firefox */
+  color: var(--disable, #d5b589);
+}
+
+input[type='text']:-ms-input-placeholder {
+  opacity: 1; /* Firefox */
+  color: var(--disable, #d5b589);
+}
+
+input[type='text']::-ms-input-placeholder {
+  opacity: 1; /* Firefox */
+  color: var(--disable, #d5b589);
+}
+
 input[type='text']::placeholder {
   opacity: 1; /* Firefox */
   color: var(--disable, #d5b589);
@@ -120,36 +140,22 @@ input[type='text']::placeholder {
 input[type='text']:focus,
 input[type='text']:hover {
   outline: none;
-  border: 1px solid var(--theme-grad-green-default, #109b77);
+  border: 1px solid #109b77;
 }
 
 input[type='text']:disabled {
-  border: none;
   cursor: not-allowed;
+  border: none;
 }
 
-.correctAns {
-  color: #07969f !important;
-  background: var(--darker-bg, #f1d9b8) !important;
-  padding-left: 32px !important;  /* Increased padding to make room for icon */
+.correctAns /* For corrected ans, injected by js autoResizelnput() */ { 
   position: relative;
-  display: inline-flex;  /* Added to ensure proper layout */
-  align-items: center;   /* Added for vertical centering */
-}
-
-.correctAns::before {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 50%;          /* Center vertically */
-  left: 4px;         /* Add some space from the left edge */
-  transform: translateY(-50%);  /* Perfect vertical centering */
-  background-image: url('https://HackettLai.github.io/picx-images-hosting/edb/label-correct.9o04sulkc0.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;  /* Center the background image */
-  pointer-events: none;  /* Ensure icon doesn't interfere with input */
+  background-image: url('https://HackettLai.github.io/picx-images-hosting/edb/label-correct.9o04sulkc0.png') !important;
+  background-position: 8px center !important;
+  background-size: 16px 16px !important;
+  background-repeat: no-repeat !important;
+  padding-left: 32px !important;
+  color: #07969f !important;
 }
 /*
  * 
@@ -280,4 +286,9 @@ body {
 }
 .resizing * {
   pointer-events: none !important;
+}
+
+b {
+  color: red;
+  font-weight: bold;
 }
