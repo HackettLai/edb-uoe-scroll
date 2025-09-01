@@ -17,4 +17,5 @@ document.addEventListener('DOMContentLoaded', function () {
     if (demoContainer) {
         new ResizeHandler(demoContainer);
     }
+
 });
