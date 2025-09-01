@@ -7,14 +7,14 @@ function autoResize(input) {
     tempInputMeasure.style.fontFamily = window.getComputedStyle(input).fontFamily;
 
     // Padding for measurement
-    tempInputMeasure.style.padding = `4px 8px`; 
+    tempInputMeasure.style.padding = `4px 8px`;
     tempInputMeasure.textContent = input.value || input.placeholder || '';
-    
+
     document.body.appendChild(tempInputMeasure);
-    
+
     const textWidth = tempInputMeasure.offsetWidth;
     document.body.removeChild(tempInputMeasure);
-    
+
     // Add extra padding for icon if input is marked as correct
     const isCorrect = input.classList.contains('correctAns');
     const finalPadding = isCorrect ? 32 : 16; // 32px when correct (for icon), 16px normal
