@@ -144,6 +144,8 @@ input[type='text']:hover {
 }
 
 input[type='text']:disabled {
+   -webkit-appearance: none;
+   opacity:1;
   cursor: not-allowed;
   border: none;
 }
