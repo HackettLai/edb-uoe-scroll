@@ -33,17 +33,20 @@
 
   <body>
     <div class="demo-container">
-      <div class="scroll-wrapper"> <!-- Mainly just for the scrollbar track -->
-        <div class="scroll-container"><!-- Actual content -->
+      <div class="scroll-wrapper">
+        <!-- Mainly just for the scrollbar track -->
+        <div class="scroll-container">
+          <!-- Actual content -->
           <h2><b>Highlights</b></h2>
-          <ol style="color:red; font-weight: bold">
+          <ol style="color: red; font-weight: bold">
             <li>Use JavaScript to create a scrollbar thumb in three parts.</li>
             <li>Manually draw the scrollbar track using the <code>::before</code> pseudo-element to make the track narrower than the thumb.</li>
             <li>Draggable thumb for scrolling.</li>
             <li>Auto-hiding when content fits container.</li>
             <li>Smooth scroll on track click.</li>
+            <li>Auto shrink text input.</li>
           </ol>
-          <p>Phasellus malesuada, magna in maximus vulputate, lacus risus luctus elit, vitae faucibus nisl nulla non elit. Sed in dolor id leo ullamcorper suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec a venenatis turpis.</p>
+          <p>Phasellus malesuada, <input type="text" /> in maximus vulputate, lacus risus luctus elit, vitae faucibus nisl nulla non elit. Sed in dolor id leo ullamcorper suscipit. <input type="text" placeholder="Type here" /> Pellentesque habitant <input type="text" value="Un" placeholder="Un"/> morbi tristique senectus et netus et malesuada fames ac turpis egestas. <input type="text" disabled value="Submitted text"> Donec a venenatis turpis.</p>
           <p>Morbi feugiat laoreet sapien, quis luctus justo pretium nec. Nullam euismod luctus lorem, eu fringilla dolor pulvinar et. Nam nec venenatis lectus, nec laoreet lorem.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec sagittis purus. Ut efficitur, felis ut semper imperdiet, turpis augue maximus sapien, ac congue orci nisi at est. Donec luctus accumsan placerat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer rutrum dui eros, at finibus elit aliquet sit amet. Curabitur efficitur eget mauris sed sodales. Sed mattis, est nec posuere consectetur, nisl ante accumsan purus, sed feugiat purus libero at nulla.</p>
           <p>Phasellus malesuada, magna in maximus vulputate, lacus risus luctus elit, vitae faucibus nisl nulla non elit. Sed in dolor id leo ullamcorper suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec a venenatis turpis.</p>
@@ -59,6 +62,7 @@
     <p style="color: red; font-weight: bold">Drag to resize the container</p>
     <!-- scripts -->
     <script src="CustomScrollbar.js"></script>
+    <script src="autoResizeInput.js"></script>
     <script src="demo.js"></script>
     <script src="dom.js"></script>
   </body>

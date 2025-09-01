@@ -92,6 +92,65 @@
 .scroll-container::-webkit-scrollbar {
   display: none;
 }
+
+/* Text input style ========================================== 
+ * 
+ * 
+ * 
+ */
+input[type='text'] {
+  transition: 0.2s ease;
+  box-sizing: border-box;
+  margin: 2px 0px;
+  border: 1px solid var(--disable, #d5b589);
+  border-radius: 16px;
+  background: var(--darker-bg, #f1d9b8);
+  padding: 4px 8px;
+  min-width: 80px;
+  height: 32px;
+  color: var(--grey-text, #4d4d4d);
+  font-size: 16px;
+}
+
+input[type='text']::placeholder {
+  opacity: 1; /* Firefox */
+  color: var(--disable, #d5b589);
+}
+
+input[type='text']:focus,
+input[type='text']:hover {
+  outline: none;
+  border: 1px solid var(--theme-grad-green-default, #109b77);
+}
+
+input[type='text']:disabled {
+  border: none;
+  cursor: not-allowed;
+}
+
+.correctAns {
+  color: #07969f !important;
+  background: var(--darker-bg, #f1d9b8) !important;
+  padding-left: 32px !important;  /* Increased padding to make room for icon */
+  position: relative;
+  display: inline-flex;  /* Added to ensure proper layout */
+  align-items: center;   /* Added for vertical centering */
+}
+
+.correctAns::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50%;          /* Center vertically */
+  left: 4px;         /* Add some space from the left edge */
+  transform: translateY(-50%);  /* Perfect vertical centering */
+  background-image: url('https://HackettLai.github.io/picx-images-hosting/edb/label-correct.9o04sulkc0.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;  /* Center the background image */
+  pointer-events: none;  /* Ensure icon doesn't interfere with input */
+}
 /*
  * 
  * 
@@ -129,6 +188,10 @@ body {
   width: 100vw;
   height: 100dvh;
   max-height: 100dvh;
+  color: var(--grey-text, #4d4d4d);
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
 }
 
 .demo-container {
